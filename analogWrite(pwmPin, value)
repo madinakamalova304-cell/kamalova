@@ -1,18 +1,5 @@
-int pwmPin = 9;   // PWM шығатын пин
+def add(a, b):
+    return a + b
 
-void setup() {
-  pinMode(pwmPin, OUTPUT);
-}
-
-void loop() {
-  // PWM мәнін баяу өзгерту (толқынды тегістеу үшін)
-  for (int val = 0; val <= 255; val++) {
-    analogWrite(pwmPin, val);  // PWM сигнал
-    delay(10);
-  }
-
-  for (int val = 255; val >= 0; val--) {
-    analogWrite(pwmPin, val);  // PWM сигнал
-    delay(10);
-  }
-}
+def test_add():
+    assert add(2, 2) == 4
