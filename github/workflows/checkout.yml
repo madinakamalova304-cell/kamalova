@@ -1,0 +1,16 @@
+name: Checkout Test
+
+on:
+  push:      # push кезінде іске қосылады
+  pull_request:
+
+jobs:
+  show-files:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Репозиторийді жүктеу
+        uses: actions/checkout@v3
+
+      - name: Файлдар тізімін шығару
+        run: ls -la
